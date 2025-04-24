@@ -1,0 +1,191 @@
+/* Define o estilo do corpo da página */
+body {
+  /* Ocupa toda a largura e altura disponível */
+  width: 100%;
+  height: 100%;
+  /* Define um fundo aesthetic e profissional com gradiente */
+  background: linear-gradient(
+    135deg,
+    #227eb4 75%,
+      #67a2cf 25%,
+      #6ea5ca 50%,
+      #227eb4 75%,
+      #1d94cf 100%
+  );
+  /* Adiciona uma transição suave e sutil ao fundo */
+  background-size: 300% 300%;
+  animation: gradientBG 20s ease-in-out infinite;
+  /* Remove margens e padding padrão */
+  margin: 0;
+  padding: 0;
+  /* Garante que o fundo cubra toda a viewport */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estiliza o título principal */
+h1 {
+  /* Adiciona uma sombra suave ao texto */
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  color: #ffffff;
+  font-size: 3.0em;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Container principal do conteúdo */
+.content {
+  /* Define a fonte do texto */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* Centraliza todo o conteúdo verticalmente e horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Ocupa toda a altura da viewport */
+  height: 100vh;
+  /* Adiciona um padding e background semi-transparente */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Container do botão */
+.button-container {
+  /* Define a fonte do texto */
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* Adiciona uma sombra suave ao botão */
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  /* Adiciona margem e padding */
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilização dos inputs */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilização do botão de login */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #4a90e2, #63b3ed);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #63b3ed, #4a90e2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.button-reg {
+  /* Define a fonte do texto */
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* Adiciona uma sombra suave ao botão */
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  /* Adiciona margem e padding */
+  margin: -20px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.reg-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #4a90e2, #63b3ed);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reg-btn:hover {
+  background: linear-gradient(45deg, #63b3ed, #4a90e2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.reg-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+
+/* Estilização do cartão de fundo */
+.card {
+  /* Posicionamento absoluto para ficar atrás do conteúdo */
+  position: absolute;
+  /* Dimensões do cartão */
+  width: 25%;
+  height: 50%;
+  /* Estilo visual do cartão */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  /* Efeito de vidro fosco */
+  backdrop-filter: blur(3px);
+  /* Sombra suave */
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.486);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  z-index: -1;
+
+}
+
+/* Ajuste no container principal para permitir posicionamento relativo */
+.content {
+  position: relative;
+}
+
+
